@@ -1,1 +1,256 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/*Variables CSS*/
+:root{
+  --header-height: 3.5rem;
+  /*Colors*/
+  --first-color: Orange;
+  --first-color-alt: orangered;
+  --beige-color: beige;
+  --beige-color-light: hsl(40, 35%, 94%);
+  --beige-color-alt: hsl(40, 35%, 72%);
+  --brown-color: hsl(18, 15%, 24%);
+  --title-color: rgba(35, 35, 35, 1)
+  --title-color: rgba(70, 70, 70,1);
+  --white-color: whitesmoke;
+  --body-color: hsl(0, 0%, 100%)
+  --container-color: hsl(0, 0%, 96%);
+  --border-color: hsl(0, 0%, 85%);
+  /*Font and Typography*//*.5rem = 8px|1rem = 16px...*/
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Chakra Petch", sans-serif;
+  --biggest-font-size: 1.875rem;
+  --big-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: 8.3rem;
+  --smallest-font-size: .75rem;
+  /*Font Weight*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  /*z-index*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*Responsive Typogrpahy*/
+@media screen and (width>=1150px){
+  :root{
+    --biggest-font-size: 4rem;
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*Base*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body, input, button{
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body{
+  background-color: var(--body-color);
+  color: var(--title-color);
+}
+
+input, button{
+  background: none;
+  border: none;
+  outline: none;
+}
+
+h1, h2, h3, h4{
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--font-bold);
+  line-height: 120%;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*Reusable CSS Classes*/
+.container{
+  max-width: 1120px;
+  margin-inline: 1rem;
+}
+
+.grid{
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section{
+  padding-block: 5rem 1rem;
+}
+
+.section-title{
+  text-align: center;
+  font-size: var(--big-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.main{
+  overflow: hidden;
+}
+
+/*Header and Nav*/
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: var(--z-fixed);
+  transition: background-color .4s, box-shadow .4s;
+}
+
+.nav{
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo{
+  color: var(--white-color);
+  font-family: var(--second-font);
+  font-weight: var(--font-bold);
+  transition: color .4s; 
+}
+
+.nav-toggle{
+  color: var(--white-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color .4s;
+  float: right;
+}
+
+/*Navigation for mobile devices*/
+@media(width <= 1150px){
+  .nav-menu{
+    position: fixed;
+    top: 10px;
+    right: -120%;
+    background-color: var(--body-color);
+    width: 300px;
+    height: 100%;
+    box-shadow: -8px 0 16px hsla(0, 0%, 0%, .15);
+    padding: 7rem 0 2rem 2rem;
+    z-index: var(--z-fixed);
+    transition: right .4s;
+  }
+}
+
+.nav-list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.nav-link{
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  transition: color .4s;
+}
+
+.nav-link:hover{
+  color: var(--first-color);
+}
+
+.nav-button{
+  background-color: var(--first-color);
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  display: inline-flex;
+  transition: background-color .4s;
+}
+
+.nav-button:hover{
+  background-color: var(--first-color-alt);
+  color: var(--title-color);
+}
+
+.nav-close{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color:var(--title-color);
+  cursor: pointer;
+}
+
+.nav-toggle{
+  color: var(--title-color);
+}
+
+/*Show menu*/
+.show-menu{
+  right: 0;
+}
+
+/* For Large Devices*/
+@media (width >= 1150px){
+  .container{
+    margin-inline: auto;
+  }
+  
+  .section{
+    padding-block: 7rem 5rem;
+  }
+  
+  .nav{
+    height: calc(var(--header-height) + 2rem);
+  }
+  
+  .nav-toggle, .nav-close{
+    display: none;
+  }
+  
+  .nav-list{
+    flex-direction: row;
+    align-items: center;
+    column-gap: 4rem;
+  }
+  
+  .nav-link{
+    color: var(--white-color);
+  }
+  
+  .nav-button{
+    color: var(--title-color);
+  }
+}

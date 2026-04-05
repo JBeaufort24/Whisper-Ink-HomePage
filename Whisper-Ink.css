@@ -132,7 +132,7 @@ img{
   top: 0;
   left: 0;
   background-color: #000;
-  z-index: var(--z-fixed);
+  z-index: 0;
   transition: background-color .4s, box-shadow .4s;
 }
 
@@ -148,7 +148,9 @@ img{
   color: var(--white-color);
   font-family: var(--second-font);
   font-weight: var(--font-bold);
-  transition: color .4s; 
+  transition: color .4s;
+  padding: 20px 0 0 20px;
+  font-size: 1.5rem;
 }
 
 .nav-toggle{
@@ -160,25 +162,29 @@ img{
 }
 
 /*Navigation for mobile devices*/
-@media(width <= 1150px){
+@media(width <= 650px){
   .nav-menu{
     position: fixed;
-    top: 10px;
+    top: 15px;
     right: -120%;
     background-color: var(--body-color);
     width: 300px;
     height: 100%;
     box-shadow: -8px 0 16px hsla(0, 0%, 0%, .15);
     padding: 7rem 0 2rem 2rem;
-    z-index: var(--z-fixed);
+    z-index: 100;
     transition: right .4s;
+  }
+  
+  button.nav-toggle{
+    color:var(--white-color);
   }
 }
 
 .nav-list{
   display: flex;
   flex-direction: column;
-  row-gap: 2.5rem;
+  row-gap: 1.5rem;
 }
 
 .nav-link{

@@ -14,7 +14,7 @@
   --title-color: rgba(35, 35, 35, 1)
   --title-color: rgba(70, 70, 70,1);
   --white-color: whitesmoke;
-  --body-color: hsl(0, 0%, 100%)
+  --body-color: rgba(100, 100, 100, 1);
   --container-color: hsl(0, 0%, 96%);
   --border-color: hsl(0, 0%, 85%);
   /*Font and Typography*//*.5rem = 8px|1rem = 16px...*/
@@ -132,7 +132,7 @@ img{
   top: 0;
   left: 0;
   background-color: #000;
-  z-index: 0;
+  z-index: 10;
   transition: background-color .4s, box-shadow .4s;
 }
 
@@ -162,11 +162,15 @@ img{
   padding-right: 10px;
 }
 
+.nav-menu{
+  background-color: var(--white-color);
+}
+
 /*Navigation for mobile devices*/
 @media(width <= 650px){
   .nav-menu{
     position: fixed;
-    top: 15px;
+    top: 0;
     right: -120%;
     background-color: var(--body-color);
     width: 300px;
@@ -234,6 +238,7 @@ img{
   position: relative;
   height: 800px;
   overflow: hidden;
+  z-index: 0;
 }
 
 .home-bg, .home-shadow{
@@ -261,7 +266,7 @@ img{
 }
 
 .home-data{
-  z-index: 10;
+  z-index: 0;
   text-align: center;
 }
 
@@ -269,6 +274,7 @@ img{
   width: 120px;
   margin-inline: auto;
   margin-bottom: 1rem;
+  border-radius: .5rem;
 }
 
 .home-title{

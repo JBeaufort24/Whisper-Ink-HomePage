@@ -149,8 +149,8 @@ img{
   font-family: var(--second-font);
   font-weight: var(--font-bold);
   transition: color .4s;
-  padding: 20px 0 0 20px;
-  font-size: 1.5rem;
+  padding: 10px 0 0 20px;
+  font-size: 2rem;
 }
 
 .nav-toggle{
@@ -159,15 +159,10 @@ img{
   cursor: pointer;
   transition: color .4s;
   float: right;
-  padding-right: 10px;
-}
-
-.nav-menu{
-  background-color: var(--white-color);
+  padding: 10px;
 }
 
 /*Navigation for mobile devices*/
-@media(width <= 650px){
   .nav-menu{
     position: fixed;
     top: 0;
@@ -184,7 +179,6 @@ img{
   button.nav-toggle{
     color:var(--white-color);
   }
-}
 
 .nav-list{
   display: flex;

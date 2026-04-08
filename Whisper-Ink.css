@@ -375,9 +375,9 @@ img{
   }
   
   .nav-list{
-    flex-direction: row;
+    display: flex;
     align-items: center;
-    column-gap: 4rem;
+    gap: 4rem;
   }
   
   .nav-link{

@@ -131,7 +131,7 @@ img{
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #000;
+  background-color: transparent;
   z-index: 10;
   transition: background-color .4s, box-shadow .4s;
 }
@@ -227,6 +227,16 @@ img{
   right: 0;
 }
 
+/*Change Header Styles*/
+.scroll-header{
+  background-color: var(--body-color);
+  box-shadow: 0 8px 16px hsla(0, 0%, 0%, .15);
+}
+
+.scroll-header :is(.nav-logo, .nav-toggle){
+  color: var(--title-color);
+}
+
 /*Home Section*/
 .home{
   position: relative;
@@ -295,16 +305,59 @@ img{
   background-color:var(--first-color-alt);
 }
 
+/*About Section*/
+.about{
+  background-color: var(--brown-color)
+}
+
+.about-container{
+  row-gap: 4rem;
+  padding-bottom: 2.5rem;
+}
+
+.about .section-title{
+  color: var(--white-color);
+}
+
+.about-description{
+  color: var(--white-color);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-info{
+  display: flex;
+  justify-content: center;
+  column-gap: 4.5rem;
+}
+
+.about-number{
+  color: var(--first-color);
+  font: var(--font-bold) var(--h1-font-size), var(--second-font);
+  margin-bottom: .5rem;
+}
+
+.about-subtitle{
+  font-size: --small-font-size;
+  color: --white-color;
+}
+
+.about-img{
+  width: 320px;
+  border-radius: 1.5rem;
+  justify-self: center;
+}
+
 /*For Medium devices*/
 @media (width >= 540px){
-  .home-container{
+  .home-container, .about-container{
     grid-template-columns: 400px;
     justify-content: center;
   }
 }
 
 /* For Large Devices*/
-@media (width >= 1150px){
+@media (width >= 650px){
   .container{
     margin-inline: auto;
   }
@@ -335,6 +388,11 @@ img{
     color: var(--title-color);
   }
   
+  /*Change header Style*/
+  .scroll-header .nav-link{
+    color: var(--title-color);
+  }
+  
   .home{
     height: 870px;
   }
@@ -349,5 +407,39 @@ img{
   
   .home-description{
     margin-bottom: 4rem;
+  }
+  
+  .about-container{
+    grid-template-columns: 500px 480px;
+    align-items: center;
+    column-gap:8rem;
+    padding-block: 3rem;
+  }
+  
+  .about-img{
+    width: 500px;
+    order: -1;
+  }
+  
+  .about-data .section-title{
+    text-align: initial;
+  }
+  
+  .about-description{
+    margin-bottom: 4rem;
+    text-align: initial;
+  }
+  
+  .about-info{
+    justify-content: initial;
+  }
+  
+  .about-number{
+    font-size: var(--big-font-size);
+    margin-bottom: 1rem;
+  }
+  
+  .about-subtitle{
+    font-size: var(--h3-font-size);
   }
 }

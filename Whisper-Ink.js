@@ -48,3 +48,15 @@ const swiperWork = new Swiper('.work-swiper', {
     type: 'fraction',
   },
 })
+
+/*Swiper Testimonial*/
+const swiperTestimonial = new Swiper('.service-swiper', {
+  loop: true,
+  slidesPerView: 'auto',
+  spaceBetween: 56,
+  grabCursor: true,
+  
+  pagination: {
+    el: '.service-swiper .swiper-pagination',
+  },
+})

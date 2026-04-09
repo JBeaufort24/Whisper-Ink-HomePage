@@ -5,16 +5,15 @@
 :root{
   --header-height: 3.5rem;
   /*Colors*/
-  --first-color: Orange;
-  --first-color-alt: orangered;
-  --beige-color: beige;
-  --beige-color-light: hsl(40, 35%, 94%);
-  --beige-color-alt: hsl(40, 35%, 72%);
-  --brown-color: hsl(18, 15%, 24%);
-  --title-color: rgba(35, 35, 35, 1)
-  --title-color: rgba(70, 70, 70,1);
+  --first-color: rgba(255, 53, 53, 1);
+  --first-color-alt: rgba(255, 100, 50, 1);
+  --beige-color: #d5b895;
+  --beige-color-light: #faf0dc;
+  --beige-color-alt: #c19770;
+  --brown-color: #a6785b;
+  --title-color: #967859;
   --white-color: whitesmoke;
-  --body-color: rgba(100, 100, 100, 1);
+  --body-color: rgba(150, 150, 150, 1);
   --container-color: hsl(0, 0%, 96%);
   --border-color: hsl(0, 0%, 85%);
   /*Font and Typography*//*.5rem = 8px|1rem = 16px...*/
@@ -294,7 +293,7 @@ img{
 .button{
   display: inline-flex;
   background-color: var(--first-color);
-  color: var(--title-color);
+  color: var(--beige-color-light);
   font-weight: var(--font-semi-bold);
   padding: 1rem 2rem;
   border-radius: .5rem;
@@ -339,7 +338,7 @@ img{
 
 .about-subtitle{
   font-size: --small-font-size;
-  color: --white-color;
+  color: var(--beige-color-light);
 }
 
 .about-img{
@@ -348,11 +347,67 @@ img{
   justify-self: center;
 }
 
+/*Collection Section*/
+.work{
+background-color: var(--beige-color);
+}
+
+.work-container{
+  row-gap: 2rem;
+}
+
+.work-description{
+  text-align: left;
+}
+
+.work-img, .work-card{
+  width: 250px;
+}
+
+article img{
+  border-radius: 1.5rem;
+}
+
+/*swiper Class*/
+.work-swiper{
+  width: 100%;
+  border-radius: 1.5rem;
+}
+
+.work-data{
+  padding-bottom: 7rem;
+}
+
+.work .swiper-pagination-fraction{
+  font-weigt:var(--font-semi-bold);
+  bottom: 3rem;
+}
+
+.work .swiper-navigation-icon{
+  display: none;
+}
+
+.work :is(.swiper-button-pre, .swiper-button-next){
+  top: initial;
+  left: initial;
+  bottom: .5rem;
+  width: initial;
+  height: initial;
+  margin: initial;
+  color: var(--title-color);
+  font-size: 1.5rem;
+}
+
 /*For Medium devices*/
 @media (width >= 540px){
   .home-container, .about-container{
     grid-template-columns: 400px;
     justify-content: center;
+  }
+  
+  .work-data{
+    width: 400px;
+    margin-inline: auto;
   }
 }
 
@@ -442,4 +497,27 @@ img{
   .about-subtitle{
     font-size: var(--h3-font-size);
   }
+  
+  .work{
+    padding-bottom:2rem;
+  }
+  
+  .work-container{
+    grid-template-columns: 200px 740px;
+    column-gap: 5rem;
+    padding: 2rem;
+  }
+  
+  .work-data{
+    width: initial;
+    padding-bottom: 12rem;
+  }
+  
+  .work-data .section-title, .work-description, .work .swiper-pagination{
+    text-align: initial;
+  }
+  
+  .work-img, .work-card{
+    width: 150px;
+ }
 }

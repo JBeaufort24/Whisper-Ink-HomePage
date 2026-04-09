@@ -35,3 +35,16 @@ const scrollHeader = () =>{
   : header.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
+
+/*Swiper Works*/
+const swiperWork = new Swiper('.work-swiper', {
+  loop: true,
+  slidesPerView: 'auto',
+  spaceBetween: 24,
+  grabCursor: true,
+  
+  pagination: {
+    el: '.work-data .swiper-pagination',
+    type: 'fraction',
+  },
+})

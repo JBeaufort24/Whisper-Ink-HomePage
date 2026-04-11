@@ -5,19 +5,19 @@
 :root{
   --header-height: 3.5rem;
   /*Colors*/
-  --first-color: rgba(255, 10, 10, .5);
-  --first-color-alt: rgba(255, 100, 50, .5);
-  --second-color: rgba( 255, 10, 10, 1);
-  --second-color-alt: rgba(255, 100, 50, 1);
+  --first-color: rgba(217, 4, 41, 1);
+  --first-color-alt: rgba(239, 35, 60, 1);
+  --second-color: rgba(217, 4, 41,.6);
+  --second-color-alt: rgba(239, 35, 60, .6);
   --beige-color: #d5b895;
   --beige-color-light: #faf0dc;
   --beige-color-alt: #c19770;
   --brown-color: #a6785b;
-  --title-color: #967859;
-  --white-color: whitesmoke;
-  --body-color: rgba(250, 250, 250, 1);
-  --container-color: hsl(0, 0%, 96%);
-  --border-color: hsl(0, 0%, 85%);
+  --title-color: #2b2d42;
+  --white-color: #edf2f4;
+  --body-color: rgba(141, 153, 174, 1);
+  --container-color: rgba(141, 153, 174, .6);
+  --border-color: whitesmoke;
   /*Font and Typography*//*.5rem = 8px|1rem = 16px...*/
   --body-font: "Montserrat", sans-serif;
   --second-font: "Chakra Petch", sans-serif;
@@ -325,6 +325,9 @@ img{
   color: var(--white-color);
   text-align: center;
   margin-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  
 }
 
 .about-info{
@@ -492,7 +495,7 @@ article img{
   align-items: center;
   column-gap: 1.5rem;
   padding: 1rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--beige-color-alt);
 }
 
 .contact-card:last-child{
@@ -522,15 +525,16 @@ article img{
 
 .contact-address{
   font-style: initial;
+  color: var(--white-color);
 }
 
 .contact-address :is(span, a){
   display: block;
-  color: var(--title-color);
+  color: var(--white-color);
 }
 
 .contact-adress a{
-  color: var(--beige-color);
+  color: var(--white-color);
 }
 
 .contact-adress a:hover{
